@@ -29,84 +29,95 @@
     </header>
 
     <!--Booking Section-->
-    <main class="main-content container">
-        <div class="booking-content">
-            <h1>Cruise Queen</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.</p>
-        </div>
-        <div class="booking-form">
-            <h3>Book Ocean Time</h3>
-            <div class="input-group">
-                <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+    <main id="main-content">
+        <div class="booking-area container">
+            <div class="booking-content">
+                <h1>Cruise Queen</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.</p>
             </div>
-            <div class="input-group">
-                <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
-            </div>
-            <div class="inputs">
+            <div class="booking-form">
+                <h3>Book Ocean Time</h3>
                 <div class="input-group">
-                    <label" for="">Departure</label>
+                    <label for="">Flying From</label>
+                    <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+                </div>
+                <div class="input-group">
+                    <label for="">Flying To</label>
+                    <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                </div>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label" for="">Departure</label>
+                            <input class="inp-style" type="date" name="">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Return</label>
                         <input class="inp-style" type="date" name="">
+                    </div>
                 </div>
-                <div class="input-group">
-                    <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">First Class ($150)</label>
+                        <input id="firstTicketCount" type="text" class="form-control text-center" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <button onclick="handleTicketOrder('firstTicket', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                        <button onclick="handleTicketOrder('firstTicket', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                    </div>
                 </div>
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">Economy ($100)</label>
+                        <input id="economyCount"type="text" class="form-control text-center" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <button onclick="handleTicketOrder('economy', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                        <button onclick="handleTicketOrder('economy', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p><span id="subtotal">$00</span></p>
+                        </div>
+                    </div>
+    
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% VAT</p>
+                        </div>
+                        <div class="right">
+                            <p><span id="tax">$0</span></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p><span id="grandTotal">$00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <button id="submitBtn" class="btn-style">Book Now</button>
             </div>
-            <div class="input-group f-class">
-                <div>
-                    <label for="">First Class ($150)</label>
-                    <input id="firstTicketCount" type="text" class="form-control text-center" value="0">
-                </div>
-                <div class="plus-minus-btn">
-                    <button onclick="handleTicketOrder('firstTicket', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
-                    <button onclick="handleTicketOrder('firstTicket', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                </div>
-            </div>
-            <div class="input-group f-class">
-                <div>
-                    <label for="">Economy ($100)</label>
-                    <input id="economyCount"type="text" class="form-control text-center" value="0">
-                </div>
-                <div class="plus-minus-btn">
-                    <button onclick="handleTicketOrder('economy', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
-                    <button onclick="handleTicketOrder('economy', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                </div>
-            </div>
-            <div class="calculations">
-                <div class="amount">
-                    <div class="left">
-                        <p>Subtotal</p>
-                    </div>
-                    <div class="right">
-                        <p><span id="subtotal">$00</span></p>
-                    </div>
-                </div>
-
-                <div class="amount">
-                    <div class="left">
-                        <p>Charge 10% VAT</p>
-                    </div>
-                    <div class="right">
-                        <p><span id="tax">$0</span></p>
-                    </div>
-                </div>
-                <hr>
-                <div class="amount">
-                    <div class="left">
-                        <h4>Total</h4>
-                    </div>
-                    <div class="right">
-                        <p><span id="grandTotal">$00</span></p>
-                    </div>
-                </div>
-            </div>
-            <button id="submitBtn" class="btn-style">Book Now</button>
         </div>
     </main>
+    <div id="choose-flight">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <h1 class="fs-3">Thank you for your parchase</h1>
+            </div>
+        </div>
+    </div>
+    <!-- book section end -->
+
     <!-- javascript Code Here -->
     <script>
         //  handle ticket Order
@@ -148,17 +159,10 @@
             }
 
         //  book now even handler 
-        document.getElementById('submitBtn').addEventListener('click',function(){
-            document.getElementById('').style.display = 'none'
+            document.getElementById('submitBtn').addEventListener("click",function(){
+                document.getElementById('main-content').style.display = 'none';
+                document.getElementById('choose-flight').style.display = 'block';
         })
-
-
-
-
-
-
-
-
 
     </script>
 </body>

@@ -12,6 +12,7 @@ body{
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
+    height: 100vh;
 }
 nav{
     height: 50px;
@@ -38,7 +39,7 @@ nav ul li a:hover, a.active{
     background-color: #E33741;
     border-radius: 5px;
 }
-.main-content{
+.booking-area{
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 70px;
@@ -62,7 +63,7 @@ nav ul li a:hover, a.active{
     padding: 25px;
     border-radius: 5px;
     float: right;
-    width: 65%;
+    width: 73%;
     margin-left: 180px;
 }
 .booking-form h3{
@@ -121,4 +122,16 @@ nav ul li a:hover, a.active{
 .amount{
     display: flex;
     justify-content: space-between;
+}
+
+
+/* choose flight */
+
+#choose-flight {
+    display: none;
+    color: #fff;
+    margin-top: 300px;
+}
+#choose-flight h1{
+    text-align: center
 }
